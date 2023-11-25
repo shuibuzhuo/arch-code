@@ -1,4 +1,5 @@
 var __Module = {
+  a: 100,
   request() {
     return {
       code: 200,
@@ -25,5 +26,5 @@ var m = window.__Module;
 const scores = m.request().data.scores;
 console.log("average", m.average(scores));
 console.log("fail", m.fail(scores));
-m.scores = 10;
-m.average();
+
+m.a = 200; // 可以随意修改模块内部的数据
